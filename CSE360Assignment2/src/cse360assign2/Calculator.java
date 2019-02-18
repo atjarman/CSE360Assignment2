@@ -1,9 +1,5 @@
 package cse360assign2;
 
-import java.util.ArrayList;
-import java.util.List;
-
-
 /**
  * Author: Andrew Jarman
  * <p>
