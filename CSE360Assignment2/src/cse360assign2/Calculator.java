@@ -1,5 +1,9 @@
 package cse360assign2;
 
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
  * Author: Andrew Jarman
  * <p>
@@ -23,6 +27,7 @@ package cse360assign2;
 public class Calculator {
 
 	private int total;
+	private String history;
 	
 	/**
 	 * Constructor that creates a calculator with the starting total value at 0.
@@ -30,6 +35,7 @@ public class Calculator {
 	
 	public Calculator () {
 		total = 0;  // not needed - included for clarity
+		history = Integer.toString(total);
 	}
 	
 	/** 
@@ -50,6 +56,7 @@ public class Calculator {
 	
 	public void add (int value) {
 		total = total + value;
+		history = history.concat(" + " + Integer.toString(value));
 	}
 	
 	/**
@@ -60,6 +67,7 @@ public class Calculator {
 	
 	public void subtract (int value) {
 		total = total - value;
+		history = history.concat(" - " + Integer.toString(value));
 	}
 	
 	/**
@@ -70,6 +78,7 @@ public class Calculator {
 	
 	public void multiply (int value) {
 		total = total * value;
+		history = history.concat(" * " + Integer.toString(value));
 	}
 	
 	/**
@@ -82,8 +91,10 @@ public class Calculator {
 	public void divide (int value) {
 		if(value == 0){
 			total = 0;
+			history = history.concat(" / " + Integer.toString(value));
 		} else {
 			total = total / value;
+			history = history.concat(" / " + Integer.toString(value));
 		}
 	}
 	
@@ -94,6 +105,6 @@ public class Calculator {
 	 */
 	
 	public String getHistory () {
-		return "";
+		return history;
 	}
 }

@@ -13,7 +13,8 @@ public class CalculatorDriver
 		calculator.multiply(2);
 		calculator.divide(3);
 		
-		System.out.print(calculator.getTotal());
+		System.out.println(calculator.getTotal());
+		System.out.println(calculator.getHistory());
 	}
 
 }
